@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "R and Git Setup on RStudio Server"
 ---
 
 About this site

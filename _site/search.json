@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "My personal teaching scripts",
+    "section": "",
+    "text": "This page collects all my prep work to teach NCEAS R workshops."
+  },
+  {
+    "objectID": "r-setup.html",
+    "href": "r-setup.html",
+    "title": "R and Git Setup on RStudio Server",
+    "section": "",
+    "text": "1 + 1\n\n[1] 2"
+  }
+]
