@@ -150,8 +150,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li class="nav-item">
     <a class="nav-link" href="./data-vis.html">Data Visualization</a>
   </li>  
-  <li class="dropdown-header">
- r-prctice.qmd</li>
+  <li class="nav-item">
+    <a class="nav-link" href="./r-practice.html">R practice: Cleaning and Manipulating Data</a>
+  </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
@@ -163,7 +164,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning objectives</a></li>
+  <li><a href="#rstudio-server" id="toc-rstudio-server" class="nav-link" data-scroll-target="#rstudio-server">RStudio server</a></li>
+  <li><a href="#set-up" id="toc-set-up" class="nav-link" data-scroll-target="#set-up">Set up</a>
+  <ul class="collapse">
+  <li><a href="#understand-how-to-use-paths-and-working-directories" id="toc-understand-how-to-use-paths-and-working-directories" class="nav-link" data-scroll-target="#understand-how-to-use-paths-and-working-directories">Understand how to use paths and working directories</a></li>
+  <li><a href="#organizing-your-project" id="toc-organizing-your-project" class="nav-link" data-scroll-target="#organizing-your-project">Organizing your project</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#setting-up-git" id="toc-setting-up-git" class="nav-link" data-scroll-target="#setting-up-git">Setting up git</a></li>
+  <li><a href="#github-authentication" id="toc-github-authentication" class="nav-link" data-scroll-target="#github-authentication">GitHub Authentication</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -184,15 +201,169 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<p>About this site</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<ul>
+<li>Hello, welcome..</li>
+<li>Introduce myself if I haven’t done so.</li>
+<li>For the last session of the day, we will open RStudio in the server and learn about RMarkdown.</li>
+</ul>
+<p>We will start with setting up RStudio and connecting RStudio with GitHub. I’m going to start sharing my screen</p>
+<p>— START SHARING SCREEN – BOOK —</p>
+<p>I’m in the book, lesson N3</p>
+<p>The <strong>learning objectives</strong> for the first part of this lesson are:</p>
+</section>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
+<ul>
+<li>Creating an R project and how to organize your work in a project</li>
+<li>How to make sure your local RStudio environment is set up for analysis</li>
+<li>How to set up Git and GitHub</li>
+</ul>
+</section>
+<section id="rstudio-server" class="level2">
+<h2 class="anchored" data-anchor-id="rstudio-server">RStudio server</h2>
+<ul>
+<li>To prevent from spending too much time of this workshop troubleshooting all the different issues that can arise when setting up R, RStudio and git environments, we have chosen to have everyone work on a remote server that has all the software you need all ready installed.</li>
+<li><strong>What is a server?</strong> For those of you who are wondering. You can think about it as working on a different computer that you access through the internet.</li>
+<li>This computer is different that the computer you have in front of you, so the server, has no knowledge of the files you have in your machine.</li>
+<li>But it is easy to transfer files from your computer to the server and vice-versa through RStudio.</li>
+</ul>
+</section>
+<section id="set-up" class="level2">
+<h2 class="anchored" data-anchor-id="set-up">Set up</h2>
+<p><strong>SERVER LOGIN</strong></p>
+<ul>
+<li><p>Everyone received and email providing your server user name and prompting to change you password?</p></li>
+<li><p>Please put up a the red sticky if you don’t have you credentials to log in to the server. You can access the server with this link found in the book. And also shared in Slack.</p></li>
+<li><p>Log in with the username and password. - Everyone here? Please put up a red sticky if you haven’t been able to log in to the server.</p></li>
+</ul>
+<p><strong>R-PROJECTS</strong></p>
+<ul>
+<li><p>In this workshop we are going to be using R projects.</p></li>
+<li><p>Have anyone here worked with R projects before?</p></li>
+<li><p>An R project bundles your work in a portable, self-contained folder. - Within the project, all the relevant scripts, data files, figures/outputs, and history are stored in sub-folders.</p></li>
+<li><p>An R project is tied to a directory on your local computer and</p></li>
+<li><p>Importantly - the working directory is the project’s root folder.</p></li>
+<li><p>This makes organizing your work and collaborating with others easier.</p></li>
+<li><p>Consider you current data analysis workflow: Where do you import your data, where do you clean your data, where do you create graphs and ultimately a report?</p></li>
+<li><p>Do you go back and forth between multiple software tools like Excel, JMP, Google docs?</p></li>
+<li><p>An R projects and the tools in R we will talk about today will consolidate this process because it can all be done and updated using one software, RStudio, within one R Project.</p></li>
+<li><p>We are going to be doing nearly everything in one Rproject this week.</p></li>
+<li><p>The server version of RStudio allows us to share projects with others. Sharing your project with the instructors of the course will allow us to see your code and offer assistance if you encounter an error you can’t fix.</p></li>
+</ul>
+<p><strong>CREATE AN R PROJECT</strong></p>
+<p>In your RStudio server session, follow these steps to set up your R project:</p>
+<ul>
+<li>In the “File” menu, select “New Project”</li>
+<li>Click “New Directory”</li>
+<li>Click “New Project”</li>
+<li>Under “Directory name” type: <code>training_{USERNAME}</code>, eg: <code>training_vargas</code></li>
+<li>Leave “Create Project as subdirectory of:” set to <code>~</code></li>
+<li>Click “Create Project”</li>
+</ul>
+<p>Your RStudio should open your project automatically after creating it. One way to check this is by looking at the top right corner and checking for the project name</p>
+<p><strong>SHARING YOUR PROJECT</strong> - To share the project with the instructor team, locate the “project switcher” drop down menu in the upper right corner of your RStudio window. - This menu has the name of your project and a small black arrow. - Click in the dropdown menu and then select <strong>Share Project</strong> - A dialog box will pop up. - Add the following usernames: dolinh, jclark, virlar-knight and vargas-poulsen.</p>
+<ul>
+<li>Click OK.</li>
+</ul>
+<p>Now we have our Rproject! We Know it an Rproject, because we can see the <code>Rproj</code> file in our pane.</p>
+<p>Let’s learn about how we move within our Rproject. We do this using paths.</p>
+<section id="preparing-to-work-in-rstudio" class="level4">
+<h4 class="anchored" data-anchor-id="preparing-to-work-in-rstudio">Preparing to work in RStudio</h4>
+<p><img src="images/RStudio_IDE.png" class="img-fluid"></p>
+<p>The default RStudio setup has a few panes that you will use. Here they are with their default locations:</p>
+<ul>
+<li>Console (entire left)</li>
+<li>Environment/History (tabbed in upper right)</li>
+<li>Files/Plots/Packages/Help (tabbed in lower right)</li>
+</ul>
+<p>You can change the default location of the panes, among many other things: <a href="https://support.rstudio.com/hc/en-us/articles/200549016-Customizing-RStudio">Customizing RStudio</a>.</p>
+<p>One key question to ask whenever we open up RStudio is “where am I?” Because we like to work in RStudio projects, often this question is synonymous with “what project am I in?”</p>
+<p>There are two places that can indicate what project we are in. The first is the project switcher menu in the upper right hand corner of your RStudio window. The second is the working directory path, in the top bar of your console. Note that by default, your working directory is set to the top level of your R project directory unless you change it using the <code>setwd()</code> function.</p>
+</section>
+<section id="understand-how-to-use-paths-and-working-directories" class="level3">
+<h3 class="anchored" data-anchor-id="understand-how-to-use-paths-and-working-directories">Understand how to use paths and working directories</h3>
+<p>Now that we have your project created (and notice we know it’s an R Project because we see a <code>.Rproj</code> file in our Files pane), let’s learn how to move in a project. We do this using paths.</p>
+<p>As we mention before, an Rproject is a self-contained folder within your computer, or server in this case.</p>
+<p>There are two types of paths in computing: <strong>absolute paths</strong> and <strong>relative paths</strong>.</p>
+<p>An absolute path always starts with the root of your file system and locates files from there. The absolute path to my project directory is: <code>/home/vargas-poulsen/training_vargas</code></p>
+<p>Relative paths start from some location in your file system that is below the root. Relative paths are combined with the path of that location to locate files on your system. R (and some other languages like MATLAB) refer to the location where the relative path starts as our <em>working directory</em>.</p>
+<p>RStudio projects automatically set the working directory to the directory of the project. This means that you can reference files from within the project without worrying about where the project directory itself is. If I want to read in a file from the <code>data</code> directory within my project, I can simply type <code>read.csv("data/samples.csv")</code> as opposed to <code>read.csv("/home/vargas-poulsen/training_vargas/data/samples.csv")</code></p>
+<p>This is not only convenient for you, but also when working collaboratively. We will talk more about this later, but if Jeanette makes a copy of my R project that I have published on GitHub, and I am using relative paths, he can run my code exactly as I have written it, without going back and changing <code>"/home/vargas-poulsen/training_vargas/data/samples.csv"</code> to <code>"/home/jclark/training_clark/data/samples.csv"</code></p>
+<p>Note that once you start working in projects you should basically never need to run the <code>setwd()</code> command. If you are in the habit of doing this, stop and take a look at where and why you do it. Could leveraging the working directory concept of R projects eliminate this need? Almost definitely!</p>
+<p>Similarly, think about how you work with absolute paths. Could you leverage the working directory of your R project to replace these with relative paths and make your code more portable? Probably!</p>
+</section>
+<section id="organizing-your-project" class="level3">
+<h3 class="anchored" data-anchor-id="organizing-your-project">Organizing your project</h3>
+<p>When starting a new research project, one of the first things I do is create an R project for it (just like we have here!). The next step is to then populate that project with relevant directories. There are many tools out there that can do this automatically. Some examples are <a href="https://github.com/benmarwick/rrtools"><code>rrtools</code></a> or <code>usethis::create_package()</code>. The goal is to organize your project so that it is a compendium of your research. This means that the project has all of the digital parts needed to replicate your analysis, like code, figures, the manuscript, and data access.</p>
+<p>There are lots of good examples out there of research compendium. Here is one from a friend of NCEAS, Carl Boettiger, which he put together for a paper he wrote.</p>
+<p>The complexity of this project reflects years of work. Perhaps more representative of the situation we are in at the start of our course is a project that looks like this one, which we have just started at NCEAS.</p>
+<p>Currently, the only file in your project is your <code>.Rproj</code> file. Let’s add some directories and start a file folder structure. Some common directories are:</p>
+<ul>
+<li><p><code>data</code>: where we store our data (often contains subdirectories for raw, processed, and metadata data)</p></li>
+<li><p><code>R</code>: contains scripts for cleaning or wrangling, etc. (some find this name misleading if their work has other scripts beyond the R programming language, in which case they call this directory <code>scripts</code>)</p></li>
+<li><p><code>plots</code> or <code>figs</code>: generated plots, graphs, and figures</p></li>
+<li><p><code>doc</code>: summaries or reports of analysis or other relevant project information</p></li>
+</ul>
+<p>Directory organization will vary from project to project, but the ultimate goal is to create a well organized project for both reproducibility and collaboration.</p>
+</section>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary">Summary</h3>
+<ul>
+<li>organize your research into projects using R projects</li>
+<li>use R project working directories instead of <code>setwd()</code></li>
+<li>use relative paths from those working directories, not absolute paths</li>
+<li>structure your R project as a compendium</li>
+</ul>
+</section>
+<section id="setting-up-git" class="level3">
+<h3 class="anchored" data-anchor-id="setting-up-git">Setting up git</h3>
+<p>Before using git, you need to tell it who you are, also known as setting the global options. The only way to do this is through the command line. Newer versions of RStudio have a nice feature where you can open a terminal window in your RStudio session. Do this by selecting Tools -&gt; Terminal -&gt; New Terminal.</p>
+<p>A terminal tab should now be open where your console usually is.</p>
+<p>To set the global options, type the following into the command prompt, with your actual name, and press enter:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Matt Jones"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>Note that if it ran successfully, it will look like nothing happened. We will check at the end to makre sure it worked.</p>
+<p>Next, enter the following line, with the email address you used when you created your account on github.com:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"gitcode@magisa.org"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>Note that these lines need to be run one at a time.</p>
+<p>Next, we will set our credentials to not time out for a very long time. This is related to the way that our server operating system handles credentials - not doing this will make your PAT (which we will set up soon) expire immediately on the system, even though it is actually valid for a month.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> credential.helper <span class="st">'cache --timeout=10000000'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Lastly, we will set up two more configurations to make sure we have everything in place for out <code>git</code> lesson tomorrow. We will dive deeper into these concepts tomorrow. So for now, all you need to know us that we are letting git know how we want git to weave in the different versions of our work.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>git config pull.rebase false</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>And then, we will set that the default branch of our work is a branch called <code>main</code>. And again, we will go over these in more details concepts tomorrow.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>git config <span class="sc">--</span>global init.defaultBranch main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Finally, check to make sure everything looks correct by entering this command, which will return the options that you have set.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> <span class="at">--list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="github-authentication" class="level3">
+<h3 class="anchored" data-anchor-id="github-authentication">GitHub Authentication</h3>
+<p>GitHub recently deprecated password authentication for accessing repositories, so we need to set up a secure way to authenticate. The book <a href="https://happygitwithr.com/credential-caching.html">Happy git with R</a> has a wealth of information related to working with git in R, and these instructions are based off of section 10.1.</p>
+<p>We will be using a PAT (Personal Access Token) in this course, because it is easy to set up. For better security and long term use, we recommend taking the extra steps to set up SSH keys.</p>
+<p>Steps:</p>
+<ol type="1">
+<li>Run <code>usethis::create_github_token()</code> in the console</li>
+<li>In the browser window that pops up, scroll to the bottom and click “generate token.” You may need to log into GitHub first.</li>
+<li>Copy the token from the green box on the next page</li>
+<li>Back in RStudio, run <code>credentials::set_github_pat()</code></li>
+<li>Paste your token into the dialog box that pops up.</li>
+</ol>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
